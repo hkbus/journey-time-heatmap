@@ -15,7 +15,7 @@ response.raise_for_status()
 zip_file = zipfile.ZipFile(io.BytesIO(response.content))
 
 # Step 2: Extract the GeoJSON file
-geojson_filename = next((name for name in zip_file.namelist() if name.endswith('.json')), None)
+geojson_filename = next((name for name in zip_file.namelist() if name.endswith('.geojson')), None)
 if not geojson_filename:
     raise FileNotFoundError("No GeoJSON file found in the downloaded ZIP.")
 with zip_file.open(geojson_filename) as file:
