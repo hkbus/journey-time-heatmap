@@ -6,7 +6,7 @@ from shapely.geometry import shape, mapping
 from pyproj import Transformer
 
 # Define the transformation parameters
-epsgTransformer = Transformer.from_crs('epsg:2326', 'epsg:4326', always_xy=True)
+epsgTransformer = Transformer.from_crs('epsg:4326', 'epsg:4326', always_xy=True)
 
 # Step 1: Download the ZIP file
 url = "https://static.csdi.gov.hk/csdi-webpage/download/0dc7f67554fc5d14a185fb1ee36494c2/geojson"
